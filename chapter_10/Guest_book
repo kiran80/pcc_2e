@@ -1,0 +1,12 @@
+from pathlib import Path
+
+i = 0
+while i <= 5:
+    name = input('Enter a name: ')
+    path = Path('guest_book.txt')
+
+    # Open the file in append mode and write the name
+    with path.open(mode='a') as file:
+        file.write(name + '\n')  # Append a newline after each name
+
+    i += 1
